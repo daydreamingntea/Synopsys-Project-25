@@ -1,4 +1,4 @@
-*Note: majority of information documenting the process and procedures of this project have been lost, the following information described below will focus on what has been recovered along with personal thoughts/experiences.*
+*Note: Majority of information documenting the process and procedures of this project have been lost. The following information described below will focus on what has been recovered along with personal thoughts/experiences. This was my first time with an engineering project and evidently, is not of high quality nor was it presenting with high quality.*
 
 
 # Personal Journey
@@ -9,7 +9,7 @@ The motivation behind this project was to compete in the Synopsys Championship. 
 
 ## Challenges
 
-This was the first project I had done for the Synopsys Championship and as a result, I was unfamiliar with the application process, expectations, and the presentation of scientific works in general. I also had a lack of internal motivation for this project and did not find much of it to be something that I would want to invest my time and effort in.
+This was the first project I had done for the Synopsys Championship. Consequently, I was unfamiliar with the application process, expectations, and the presentation of scientific works in general. I also had a lack of internal motivation for this project and did not find much of it to be something that I would want to invest my time and effort in.
 
 ## Takeaways
 
@@ -17,7 +17,7 @@ While the topic of the project was not my own nor of my interest, having that ex
 
 # Abstract
 
-The human eye can only see the visible light spectrum, but there is always invisible light around us that we cannot perceive. 
+The human eye can only see the visible light spectrum, but there is always invisible waves around us that we cannot perceive. With our "super eye", we will be able to see those invisible waves around us.
 
 # Project Description
 
