@@ -17,7 +17,11 @@ While the topic of the project was not my own nor of my interest, having that ex
 
 # Abstract
 
-The human eye can only see the visible light spectrum, but there is always invisible waves around us that we cannot perceive. With our "super eye", we will be able to see those invisible waves around us.
+The human eye can only see the visible light spectrum, but there is always invisible waves around us that we cannot perceive. With our "super eye", we will be able to see those invisible waves around us. What we are trying to create is a way to have visible and invisible light included in the same image; thus expanding the range of light a human can experience.
+
+The first approach we took was to map UV and IR light to parts of the visible spectrum before combining a visible and invisible light image; a second approach was to exclude certain parts of an image before combining it with another image (masking). In the case of the flower *Oxalis fontana*, we used the first approach. After combining the two images, we were able to see the pollen concentrated at the center of the flower. For the second approach, we managed to only include the portion of the stovetop (turned on) that can be shown in IR light and combine it with a visible light image. The result was a normal looking kitchen with a stovetop showing a purple glow. 
+
+Due to lack of time and equipment there were certain goals which we were unable to achieve: taking photos ourself with UV light, and experimenting with more ways of combining images. One possibility is to use UV and IR light lamps to capture images to increase the amount of invisible light in the image, allowing certain details to stand out.
 
 # Project Description
 
