@@ -7,12 +7,19 @@
 
 The motivation behind this project was to compete in the Synopsys Championship. This project was not my nor my partner's idea, rather it was given to us from a parent. Consequently, a lot of parental guidance was needed. I myself found this project to be unexciting and boring as it was already in an area I had no interest in and was heavy on coding, a skill that I do not possess. 
 
+## Challenges
+
+This was the first project I had done for the Synopsys Championship and as a result, I was unfamiliar with the application process, expectations, and the presentation of scientific works in general. I also had a lack of internal motivation for this project and did not find much of it to be something that I would want to invest my time and effort in.
+
 ## Takeaways
 
 While the topic of the project was not my own nor of my interest, having that exposure to the application process and presenting my work is definitely something that I have put to use at some point in time. In fact, after competing in 2025, I was urged to compete again in 2026  where I had less parental guidance with more personal freedom, pushing me to learn and solve my own problems instead of asking for help from an adult. Even though majority of the information regarding this project was lost, its main impact was its place as a origination of my journey in STEM.
 
+# Abstract
 
-# Project Overview
+The human eye can only see the visible light spectrum, but there is always invisible light around us that we cannot perceive. 
+
+# Project Description
 
 ## Objective
 
@@ -21,4 +28,3 @@ While the topic of the project was not my own nor of my interest, having that ex
 ## Future Progress
 
 
-# Abstract
