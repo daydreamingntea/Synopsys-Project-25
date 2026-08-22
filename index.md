@@ -1,4 +1,4 @@
-*Note: Majority of information documenting the process and procedures of this project have been lost. The following information described below will focus on what has been recovered along with personal thoughts/experiences. This was my first time with an engineering project and evidently, is not of high quality nor was it presented well.*
+*Note: Majority of information documenting the process and procedures of this project have been lost. The following information described below will focus on what has been recovered along with personal thoughts/experiences. This was my first time with an engineering project and evidently, is not of high quality nor was it presented at its best.*
 
 
 # Personal Journey
@@ -13,7 +13,7 @@ This was the first project I had done for the Synopsys Championship. Consequentl
 
 ## Takeaways
 
-While the topic of the project was not my own nor of my interest, having that exposure to the application process and presenting my work is definitely something that I have put to use at some point in time. In fact, after competing in 2025, I was urged to compete again in 2026  where I had less parental guidance with more personal freedom, pushing me to learn and solve my own problems instead of asking for help from an adult. Even though majority of the information regarding this project was lost, its main impact was its place as a origination of my journey in STEM.
+While the topic of the project was not my own nor of my interest, having that exposure to the application process and presenting my work is definitely something that I have put to use at some point in time. In fact, after competing in 2025, I was urged to compete again in 2026  where I had less parental guidance and more freedom over my project, pushing me to learn and solve my own problems instead of asking for help from an adult. Even though majority of the information regarding this project was lost, its main impact was its place as a origination of my journey in STEM exploration.
 
 # Abstract
 
@@ -37,12 +37,396 @@ The parent who had created this project's topic had devised two different method
 
 ### Merging
 
-This first approach would use a portion of the visible light spectrum would be used to represent the invisible light. For example, if an image was taken with UV light, we could reserve the purple portion of the visible light spectrum for the UV image. The colors on the UV image would be remapped using the section of the visible light spectrum that has been reserved. The same will be done to the image taken with visible light, the colors will be remapped with our new "compressed" light spectrum before the two images are layered over each other. Once the images are layered, the details of both images may be seen simultaneously. As for the downsides, the coloring of the new combined image will be off, which is why the second method was also considered in this project.
+This first approach would use a portion of the visible light spectrum would be used to represent the invisible light. For example, if an image was taken with UV light, we could reserve the purple portion of the visible light spectrum for the UV image. The colors on the UV image would be remapped using the section of the visible light spectrum that has been reserved. The same will be done to the image taken with visible light, the colors will be remapped with our new "compressed" light spectrum before the two images are layered over each other. Once the images are layered, the details of both images may be seen simultaneously. As for the downsides, the coloring of the new combined image will be off, overall quality may decrease (pixelation of image), and the images need to be lined up properly in order for them to combine cleanly. 
 
 ### Masking
 
-
+Two images are taken, one at visible light and one at an invisible light. An attribute unique to the image with invisible light can be selected and moved onto the visible light image. In our project, we had two images of a stove top that has been turned on. The image taken with IR light had a glowing purple stovetop while the image taken with visible light did not. The images were uploaded to a code where we manually inputted a range of RGB values. Colors matching those values would be taken from the IR image and masked onto the visible light image. The downside of this method is that it requires manual input of the RGB values (as well as trial and error) in order for the correct colors to be masked on properly. It may also result in certain unwanted details to be masked as well. In comparison to the merging method, masking does a better job of preserving the combined image's quality, color, and does not require the two initial images to line up properly for combination to occur. 
 
 ## Future Progress
 
+Initially, we had hoped to have more time to take our own photos using a full spectrum camera and combine those images we had taken ourselves. We could have also found images taken in all different environments (e.g. space, the ocean, microscopic world, etc) and combined those images to see the effects of invisible light at different magnifications. As for this project's future, I do not plan on continuing it any time soon or making any further alterations. 
 
+
+# Code
+
+Any software that can run Python should be able to run this code. All the file names/paths have been altered to roughly describe the image. When it came to switching between the masking and mapping methods or changing certain files, the unused lines of code were simply commented out. There have been many iterations of code for this project and I am unsure if this are the finalized version.
+
+This version of the code will also include the test images that were used. I tried my best to add in comments to help distinguish these images and any sections that were used as tests.
+
+```python
+
+# Imports
+import matplotlib.pyplot as plt
+import cv2
+import numpy as np
+
+# Read image
+# VS or VL stands for visible light
+
+PhotoSelection = 5
+
+match PhotoSelection:
+    case 1:
+        imagePath = "/Users/Name/Downloads/"
+        # Toys
+        # This case is a test
+        vl_img = cv2.imread(imagePath + "toy.JPG")
+        uv_img = cv2.imread(imagePath + "toy_blue.JPG")
+    case 2:
+        imagePath = "/Users/Name/Downloads/"
+        # Flowers at gate
+        # This case was used in the mapping method
+        vl_img = cv2.imread(imagePath+"gateflower_red.JPG")
+        # vl_img = cv2.imread(gateflower_yellow.JPG")
+        uv_img = cv2.imread(imagePath+"gateflower_blue.JPG")
+    case 3:
+        imagePath = "/Users/Name/Downloads/"
+        # 1. Geranium sylvaticum - A large-flowered species with a strong UV signature in the fashion of a typical bull's-eye pattern. The UV-absorbing central area coincides with the visible-light nectar guide marks. It is instructive to compare the UV marks of this species with its close relative, G. pratense, and note the obvious differences between these species.
+        # This case was used in the mapping method
+        vl_img = cv2.imread(imagePath+"GERA_SYL_VL_I030609652.jpg")
+        uv_img = cv2.imread(imagePath+"GERA_SYL_UV_I030609653.jpg")
+    case 4:
+        imagePath = "/Users/Name/Downloads/"
+        # 2. Taraxacum vulgare  - This species has virtually no visual indication of a bull's-eye pattern. UV reflectance of the outer petals is high, but variable, and so is the area extent of the dark central zone in the bull's eye pattern. The common dandelion comprises a myriad of apomictic microspecies and this probably gives the observed variability in UV patterns. Still, dandelions are among the easiest subjects for perfecting your UV photographic skills.
+        # This case was used in the mapping method
+        vl_img = cv2.imread(imagePath+"tarax_vis.jpg")
+        uv_img = cv2.imread(imagePath+"tarax_UV.jpg")
+    case 5:
+        imagePath = "/Users/Name/Downloads/"
+        # 3. Oxalis fontana Bunge - Only occurring as a rare weed in Norway, Upright Yellow Sorrel displays a very prominent and nice UV pattern on its light yellow petals.
+        # This case was used in the mapping method
+        vl_img = cv2.imread(imagePath+"oxalisfontana.jpg")
+        uv_img = cv2.imread(imagePath+"oxalisfontanauv.jpg")
+    case 6:
+        imagePath = "/Users/Name/Downloads/"
+        # Color vs wavelength
+        # This case is a test
+        vl_img = cv2.imread(imagePath + "visible-spectrum-nm.png")
+        uv_img = cv2.imread(imagePath + "visible-spectrum-nm.png")
+    case 7:
+        imagePath = "/Users/Name/Downloads/"
+        # Color vs Hue
+        # This case is a test
+        vl_img = cv2.imread(imagePath + "cona-hue-ranges-map.png")
+        uv_img = cv2.imread(imagePath + "cona-hue-ranges-map.png")
+    case 8:
+        imagePath = "/Users/Name/Downloads/"
+        # Color vs Hue
+        # This case is a test
+        vl_img = cv2.imread(imagePath + "studioghibli.jpg")
+        uv_img = cv2.imread(imagePath + "studioghibli.jpg")
+    case 9:
+        imagePath = "/Users/Name/Downloads/"
+        # Color vs Hue
+        # This case is a test
+        vl_img = cv2.imread(imagePath + "totoroflowers.png")
+        uv_img = cv2.imread(imagePath + "totoroflowers.png")
+    case 10:
+        imagePath = "/Users/Name/Downloads/"
+        # Color vs Hue
+        # This case is a test
+        vl_img = cv2.imread(imagePath + "1338664.png")
+        uv_img = cv2.imread(imagePath + "1338664.png")
+    case 11:
+        imagePath = "/Users/Name/Downloads/"
+        # Color vs Hue
+        # This case was used in the masking method
+        vl_img = cv2.imread(imagePath + "Stove_2_VS_IMG_0162.JPG")
+        uv_img = cv2.imread(imagePath + "Stove_2_720nm_IMG_0163.JPG")
+
+    case _:
+        print("****** Input has no match ******")
+        exit(-1)
+
+
+# Scale your BIG image into a small one:
+scalePercent = 0.4
+# Calculate the new dimensions
+width = int(vl_img.shape[1] * scalePercent)
+height = int(vl_img.shape[0] * scalePercent)
+newSize = (width, height)
+
+
+# Resize the image:
+vl_img = cv2.resize(vl_img, newSize, None, None, None, cv2.INTER_AREA)
+vl_img_rgb = cv2.cvtColor(vl_img, cv2.COLOR_BGR2RGB)
+uv_img = cv2.resize(uv_img, newSize, None, None, None, cv2.INTER_AREA)
+uv_img_rgb = cv2.cvtColor(uv_img, cv2.COLOR_BGR2RGB)
+
+# HSV domain
+vl_hsv = cv2.cvtColor(vl_img, cv2.COLOR_BGR2HSV)
+vl_h, vl_s, vl_v = cv2.split(vl_hsv)
+h_org = vl_h.reshape(-1)  # Save h values
+uv_hsv = cv2.cvtColor(uv_img, cv2.COLOR_BGR2HSV)
+uv_h, uv_s, uv_v = cv2.split(uv_hsv)
+
+# Update the gray scale IR photo by assigning color
+if PhotoSelection == 31:
+    #uv_h = np.full_like(uv_h, 120)    # This IR photo Hue is zero since there is no color. Give it red color
+    #uv_hsv[:,:,0] = 120  # Set Hue directly
+    uv_s = np.full_like(uv_s, 200)
+    uv_hsv[:,:,1] = 200
+    print('Update color to grayscale image')
+
+# Mapping color
+MappingSelection = 1 # Choose mapping scheme
+Weight_rgb = 0.5     # Weigt of visible light picture when add in RGB domain
+
+match MappingSelection:
+    case 1:
+        # Linear
+        Weight_hue = 0.75    # Hue range of visible light picture (0, 0.75) * 180
+        Scale_uv_sv = 1      # Multiple UV V&S value during remapping to increase its impact when adding with VL pic
+        vl_h_remap = (vl_h*Weight_hue).astype('uint8')    # Change Hue range
+        uv_h_remap = (uv_h*(1-Weight_hue) + 180*Weight_hue).astype('uint8')
+        uv_s_remap = (np.clip(uv_s.astype('uint16')*Scale_uv_sv, 0, 255)).astype('uint8')
+        uv_v_remap = (np.clip(uv_v.astype('uint16')*Scale_uv_sv, 0, 255)).astype('uint8')
+    case 2:
+        # Square
+        Weight_hue = 0.75    # Hue range of visible light picture (0, 0.75) * 180
+        Scale_uv_sv = 1      # Mulitple UV V&S value during remapping to increase its impact when adding with VL pic
+        vl_h_remap = (Weight_hue*np.square(vl_h/180)*180).astype('uint8')    # Change Hue range
+        uv_h_remap = (uv_h*(1-Weight_hue) + 180*Weight_hue).astype('uint8')
+        uv_s_remap = (np.clip(uv_s.astype('uint16')*Scale_uv_sv, 0, 255)).astype('uint8')
+        uv_v_remap = (np.clip(uv_v.astype('uint16')*Scale_uv_sv, 0, 255)).astype('uint8')
+    case 3:
+        # Square root
+        Weight_hue = 0.75    # Hue range of visible light picture (0, 0.75) * 180
+        Scale_uv_sv = 1      # Mulitple UV V&S value during remapping to increase its impact when adding with VL pic
+        vl_h_remap = (Weight_hue*np.sqrt(vl_h/180)*180).astype('uint8')    # Change Hue range
+        uv_h_remap = (uv_h*(1-Weight_hue) + 180*Weight_hue).astype('uint8')
+        uv_s_remap = (np.clip(uv_s.astype('uint16')*Scale_uv_sv, 0, 255)).astype('uint8')
+        uv_v_remap = (np.clip(uv_v.astype('uint16')*Scale_uv_sv, 0, 255)).astype('uint8')
+    case 4:
+        # Piecewise linear
+        Weight_hue = 0.75    # New Hue point of original hue of 1 (1 represent 180 deg, which is max Hue)
+        Weight_org_hue_1 = 0.5 # Original Hue point of mid segment
+        Weight_hue_1 = 0.2     # New Hue point of mid segment
+        Scale_uv_sv = 1      # Multiple UV V&S value during remapping to increase its impact when adding with VL pic
+        index_vl_h_seg1 = np.where(vl_h<=180*Weight_org_hue_1)  # Take Hue index belonging to 1st segment
+        index_vl_h_seg2 = np.where(vl_h>180*Weight_org_hue_1)   # Take Hue index belonging to 2nd segment
+        vl_h_remap = vl_h
+        vl_h_remap[index_vl_h_seg1] = (Weight_hue_1*vl_h[index_vl_h_seg1]).astype('uint8')    # Change Hue of 1st segment
+        Slope_seg2 = (Weight_hue - Weight_hue_1)/(1-Weight_org_hue_1)
+        vl_h_remap[index_vl_h_seg2] = (Slope_seg2*vl_h[index_vl_h_seg2] + Weight_hue_1*180).astype('uint8') # Change Hue of 2nd segment
+        uv_h_remap = (uv_h*(1-Weight_hue) + 180*Weight_hue).astype('uint8')
+        uv_s_remap = (np.clip(uv_s.astype('uint16')*Scale_uv_sv, 0, 255)).astype('uint8')
+        uv_v_remap = (np.clip(uv_v.astype('uint16')*Scale_uv_sv, 0, 255)).astype('uint8')
+    case _:
+        print("****** Mapping Selection wrong ******")
+        exit(-2)
+
+# Convert HSV to RGB
+vl_hsv_remap = cv2.merge([vl_h_remap, vl_s, vl_v])
+vl_img_remap_rgb = cv2.cvtColor(vl_hsv_remap, cv2.COLOR_HSV2RGB)
+# Convert HSV to RGB
+uv_hsv_remap = cv2.merge([uv_h_remap, uv_s_remap, uv_v_remap])
+uv_img_remap_rgb = cv2.cvtColor(uv_hsv_remap, cv2.COLOR_HSV2RGB)
+# Add 2 photo in RGB
+comb_img_rgb = (vl_img_rgb.astype('uint16')*Weight_rgb + uv_img_rgb.astype('uint16')*(1-Weight_rgb)).astype('uint8')  # Change to uint16 to avoid overflow
+comb_img_remap_rgb = (vl_img_remap_rgb.astype('uint16')*Weight_rgb + uv_img_remap_rgb.astype('uint16')*(1-Weight_rgb)).astype('uint8')  # Change to uint16 to avoid overflow
+
+
+# ====================================
+#         show combine  img
+# ====================================
+fig = plt.figure(figsize=(12,10))
+ax1 = fig.add_subplot(3,2,1)
+ax2 = fig.add_subplot(3,2,2)
+ax3 = fig.add_subplot(3,2,3)
+ax4 = fig.add_subplot(3,2,4)
+ax5 = fig.add_subplot(3,2,5)
+ax6 = fig.add_subplot(3,2,6)
+ax1.imshow(vl_img_rgb)
+ax1.set_title('Original ')
+ax2.imshow(vl_img_remap_rgb)
+ax2.set_title('Original Remap')
+ax3.imshow(uv_img_rgb)
+ax3.set_title('UV ')
+ax4.imshow(uv_img_remap_rgb)
+ax4.set_title('UV Remap')
+ax5.imshow(comb_img_rgb)
+ax5.set_title('Direct RGB add - no color remap - VL+UV')
+ax6.imshow(comb_img_remap_rgb)
+ax6.set_title('Combined - color remap - VL+UV')
+
+
+
+# ****************************
+#         Photo Mask
+# ****************************
+
+MaskSelection = 1
+
+match MaskSelection:
+    case 1:
+        # Mask in RGB domain
+        imgmask_in = vl_img  # Input to this process
+        imgmask_in_rgb = cv2.cvtColor(imgmask_in, cv2.COLOR_BGR2RGB)  # Convert to RGB for plot
+        # Here, you define your target color as a tuple of three values: RGB. [130, 158, 0] is green color
+        MaskColor = [130, 158, 0]
+        # You define an interval that covers the values in the tuple and are below and above them by 20
+        MaskRange = 50
+        # BGR (NOT RGB) color range - cannot be less than 0. That's why the color values have been adjusted here:
+        # Be aware that opencv loads image in BGR format,
+        MaskBoundaries = [([MaskColor[2], MaskColor[1]-MaskRange, MaskColor[0]-MaskRange],
+                   [MaskColor[2]+MaskRange, MaskColor[1]+MaskRange, MaskColor[0]+MaskRange])]
+
+        # for each range in mask boundary list,
+        for (lower, upper) in MaskBoundaries:
+            print('Boundaries = ', MaskBoundaries)
+        #    print('image shape', vl_img.shape[0], vl_img.shape[1])
+
+            # You get the lower and upper part of the interval:
+            lower = np.array(lower, dtype=np.uint8)
+            upper = np.array(upper, dtype=np.uint8)
+
+            # cv2.inRange is used to binarize (i.e., render in white/black) an image
+            # All the pixels that fall inside your interval [lower, upper] will be white
+            # All the pixels that do not fall inside this interval will
+            # be rendered in black, for all three channels:
+            MaskColor = cv2.inRange(imgmask_in, lower, upper)
+            MaskColor_rgb = cv2.cvtColor(MaskColor, cv2.COLOR_BGR2RGB)
+
+            # Now, you AND the mask and the input image
+            # All the pixels that are white in the mask will
+            # survive the AND operation, all the black pixels will remain black
+            imgmask_out = cv2.bitwise_and(imgmask_in, imgmask_in, mask=MaskColor)
+            imgmask_out_rgb = cv2.cvtColor(imgmask_out, cv2.COLOR_BGR2RGB)
+
+            # You can use the mask to count the number of white pixels.
+            # Remember that the white pixels in the mask are those that
+            # fall in your defined range, that is, every white pixel corresponds
+            # to a green pixel. Divide by the image size and you got the
+            # percentage of green pixels in the original image:
+            ratio_mask = cv2.countNonZero(MaskColor)/(imgmask_in.size/3)
+            # This is the color percent calculation.
+            colorPercent = ratio_mask * 100
+
+            # Print the color percent, use 2 figures past the decimal point
+            print('mask pixel percentage:', np.round(colorPercent, 2))
+    case 2:
+        # Mask in Hue domain
+        imgmask_in = uv_hsv  # Input to this process
+        imgmask_in_rgb = cv2.cvtColor(imgmask_in, cv2.COLOR_HSV2RGB)  # Convert to RGB for plot
+        MaskHue = 30    # Hue target, 30 - green, 150 - magenta
+        MaskRange = 30   # Hue range
+        # HSV boundries. Only care Hue. S and V take full value of [0, 255]
+        MaskBoundaries = [([MaskHue-MaskRange, 0, 50],
+                   [MaskHue+MaskRange, 255, 255])]
+
+        # for each range in mask boundary list,
+        for (lower, upper) in MaskBoundaries:
+            print('Boundaries = ', MaskBoundaries)
+            # You get the lower and upper part of the interval:
+            lower = np.array(lower, dtype=np.uint8)
+            upper = np.array(upper, dtype=np.uint8)
+
+            # cv2.inRange is used to binarize (i.e., render in white/black) an image. All the pixels that fall inside your interval [lower, upper] will be white
+            # All the pixels that do not fall inside this interval will be rendered in black, for all three channels:
+            MaskColor = cv2.inRange(imgmask_in, lower, upper)
+            MaskColor_rgb = cv2.cvtColor(MaskColor, cv2.COLOR_BGR2RGB)
+
+            # AND the mask and the input image. All the pixels that are white in the mask will survive the AND operation, all the black pixels will remain black
+            #imgmask_out = cv2.bitwise_and(imgmask_in, imgmask_in, mask=MaskColor)
+            #imgmask_out_rgb = cv2.cvtColor(imgmask_out, cv2.COLOR_HSV2RGB)  # Convert to RGB for plot
+            imgmask_out = cv2.bitwise_and(imgmask_in, imgmask_in, mask=MaskColor)
+            imgmask_out_rgb = cv2.cvtColor(imgmask_out, cv2.COLOR_HSV2RGB)  # Convert to RGB for plot
+
+            # Use the mask to count the number of white pixels. The white pixels in the mask are those that fall in the defined range
+            ratio_mask = cv2.countNonZero(MaskColor)/(imgmask_in.size/3)
+            colorPercent = ratio_mask * 100   # This is the color percent calculation.
+
+            # Print the color percent, use 2 figures past the decimal point
+            print('mask pixel percentage:', np.round(colorPercent, 2))
+
+        print("case 2 - HSV mask")
+    case 3:
+        # Mask in HSV value domain
+        imgmask_in = uv_hsv  # Input to this process
+        imgmask_in_rgb = cv2.cvtColor(imgmask_in, cv2.COLOR_HSV2RGB)  # Convert to RGB for plot
+        #MaskHue = 150  # Hue target, 30 - green, 150 - magenta
+        MaskValue = 180  # Hue target, 30 - green, 150 - magenta
+        #MaskRange = 10  # Hue range
+        # HSV boundries. Only care Hue. S and V take full value of [0, 255]
+        MaskBoundaries = [([0, 0, MaskValue],
+                           [180, 255, 255])]
+
+        # for each range in mask boundary list,
+        for (lower, upper) in MaskBoundaries:
+            print('Boundaries = ', MaskBoundaries)
+            # You get the lower and upper part of the interval:
+            lower = np.array(lower, dtype=np.uint8)
+            upper = np.array(upper, dtype=np.uint8)
+
+            # cv2.inRange is used to binarize (i.e., render in white/black) an image. All the pixels that fall inside your interval [lower, upper] will be white
+            # All the pixels that do not fall inside this interval will be rendered in black, for all three channels:
+            MaskColor = cv2.inRange(imgmask_in, lower, upper)
+            MaskColor_rgb = cv2.cvtColor(MaskColor, cv2.COLOR_BGR2RGB)
+
+            # AND the mask and the input image. All the pixels that are white in the mask will survive the AND operation, all the black pixels will remain black
+            imgmask_out = cv2.bitwise_and(imgmask_in, imgmask_in, mask=MaskColor)
+            imgmask_out_rgb = cv2.cvtColor(imgmask_out, cv2.COLOR_HSV2RGB)  # Convert to RGB for plot
+
+            # Use the mask to count the number of white pixels. The white pixels in the mask are those that fall in the defined range
+            ratio_mask = cv2.countNonZero(MaskColor) / (imgmask_in.size / 3)
+            colorPercent = ratio_mask * 100  # This is the color percent calculation.
+
+            # Print the color percent, use 2 figures past the decimal point
+            print('mask pixel percentage:', np.round(colorPercent, 2))
+
+        print("case 3 - HSV value msk")
+    case _:
+        print("****** Mask Selection wrong ******")
+        exit(-3)
+
+
+# Change vL image with anti-mask
+AntiMaskColor_rgb = cv2.cvtColor(~MaskColor, cv2.COLOR_BGR2RGB)
+vlimgmask_out = cv2.bitwise_and(vl_hsv, vl_hsv, mask=~MaskColor)
+vlimgmask_out_rgb = cv2.cvtColor(vlimgmask_out, cv2.COLOR_HSV2RGB)  # Convert to RGB for plot
+comb_img_mask_rgb = vlimgmask_out_rgb + imgmask_out_rgb
+
+# ====================================
+#         show mask img
+# ====================================
+fig2 = plt.figure(figsize=(12,8))
+ax2_1 = fig2.add_subplot(3,3,1)
+ax2_2 = fig2.add_subplot(3,3,2)
+ax2_3 = fig2.add_subplot(3,3,3)
+ax2_4 = fig2.add_subplot(3,3,4)
+ax2_5 = fig2.add_subplot(3,3,5)
+ax2_6 = fig2.add_subplot(3,3,6)
+ax2_7 = fig2.add_subplot(3,3,7)
+ax2_8 = fig2.add_subplot(3,3,8)
+ax2_9 = fig2.add_subplot(3,3,9)
+
+ax2_1.imshow(imgmask_in_rgb)
+ax2_1.set_title('For Mask Gen')
+ax2_2.imshow(MaskColor_rgb)
+ax2_2.set_title('Mask')
+ax2_3.imshow(imgmask_out_rgb)
+ax2_3.set_title('Img after mask ')
+ax2_4.imshow(vl_img_rgb)
+ax2_4.set_title('VL Original')
+ax2_5.imshow(AntiMaskColor_rgb)
+ax2_5.set_title('Anti Mask')
+ax2_6.imshow(vlimgmask_out_rgb)
+ax2_6.set_title('VL img after anti-mask')
+ax2_9.imshow(comb_img_mask_rgb)
+ax2_9.set_title('Combined after mask')
+
+plt.show()
+
+```
+
+# Images
+
+Majority of the images were lost over time (I deleted them to clear up storage) and so the following figures are the remaining ones that I managed to recover. As for the image results, all of them were lost. A description has been added to help with visualizing the combined images. Feel free to try and run the code with the images to see the results (although I am unsure if the code is the finalized/functional version).
+
+## Tests
+
+## Merging
+
+## Masking
