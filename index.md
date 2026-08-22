@@ -425,6 +425,8 @@ plt.show()
 
 Majority of the images were lost over time (I deleted them to clear up storage) and so the following figures are the remaining ones that I managed to recover. As for the image results, all of them were lost. A description has been added to help with visualizing the combined images. Feel free to try and run the code with the images to see the results (although I am unsure if the code is the finalized/functional version).
 
+Originally, we removed the filter on a camera to create a full spectrum camera. Lenses were placed on top of the camera to only allow light of certain wavelengths to be captured.
+
 ## Testing the Lenses
 
 The follow images below were taken by the students using a full spectrum camera and colored lenses.
