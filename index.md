@@ -429,7 +429,9 @@ Originally, we removed the filter on a camera to create a full spectrum camera. 
 
 ## Testing the Lenses
 
-The follow images below were taken by the students using a full spectrum camera and colored lenses.
+The follow images below were taken by the students using a full spectrum camera and colored lenses. I am including the images that have been recolored using Python code (I don't think the code for the recoloring was included in the "Code" section). The purpose of recoloring was to introduce us to image recoloring by altering the RGB values in the image.
+
+### Set One
 
 Original image taken with a normal camera:
 
@@ -446,6 +448,40 @@ Full spectrum camera with green lens:
 Full spectrum camera with blue lens:
 
 <img width="100%" src="https://github.com/user-attachments/assets/1f315d33-367a-491e-8908-6f4167becd25" />
+
+Recolored image (magenta):
+
+<img width="100%" src="https://github.com/user-attachments/assets/72340eed-5257-46e7-aca5-94ce9636d210" />
+
+Recolored image (yellow):
+
+<img width="100%" src="https://github.com/user-attachments/assets/59051d5b-2057-41e2-88f7-2c30c49bc4a3" />
+
+### Set Two
+
+Original image taken with a normal camera:
+
+<img width="100%" src="https://github.com/user-attachments/assets/db13b06d-f72d-4dcf-b0ee-e26876d43443" />
+
+Full spectrum camera with red lens:
+
+<img width="100%" src="https://github.com/user-attachments/assets/c8fb6a70-8cb8-463b-9e69-d83b131c71fa" />
+
+Full spectrum camera with green lens:
+
+<img width="100%" src="https://github.com/user-attachments/assets/aaaa49a1-c8e8-4227-afe6-d7d6d431ac5b" />
+
+Full spectrum camera with blue lens:
+
+<img width="100%" src="https://github.com/user-attachments/assets/b03a5d27-6458-4a4a-a59b-1e2db6ba6b2f" />
+
+Recolored image (magenta):
+
+<img width="100%" src="https://github.com/user-attachments/assets/03f5a0b3-5699-4e2b-9202-4ff177b20bd2" />
+
+Recolored image (yellow):
+
+<img width="100%" src="https://github.com/user-attachments/assets/a426a5b1-8b76-4968-ae4a-7b3f684c8cdf" />
 
 
 ## Merging Photos
