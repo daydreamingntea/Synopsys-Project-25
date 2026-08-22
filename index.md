@@ -425,7 +425,7 @@ plt.show()
 
 Majority of the images were lost over time (I deleted them to clear up storage) and so the following figures are the remaining ones that I managed to recover. As for the image results, all of them were lost. A description has been added to help with visualizing the combined images. Feel free to try and run the code with the images to see the results (although I am unsure if the code is the finalized/functional version).
 
-## Testing the lenses
+## Testing the Lenses
 
 The follow images below were taken by the students using a full spectrum camera and colored lenses.
 
@@ -446,6 +446,6 @@ Full spectrum camera with blue lens:
 <img width="100%" src="https://github.com/user-attachments/assets/1f315d33-367a-491e-8908-6f4167becd25" />
 
 
-## Merging
+## Merging Photos
 
-## Masking
+## Masking Photos
