@@ -35,9 +35,20 @@ Devise a method to combine an image taken with visible light with an image taken
 
 The parent who had created this project's topic had devised two different methods to combine the images. 
 
-### Merging
+### Mapping
 
-This first approach would use a portion of the visible light spectrum would be used to represent the invisible light. For example, if an image was taken with UV light, we could reserve the purple portion of the visible light spectrum for the UV image. The colors on the UV image would be remapped using the section of the visible light spectrum that has been reserved. The same will be done to the image taken with visible light, the colors will be remapped with our new "compressed" light spectrum before the two images are layered over each other. Once the images are layered, the details of both images may be seen simultaneously. As for the downsides, the coloring of the new combined image will be off, overall quality may decrease (pixelation of image), and the images need to be lined up properly in order for them to combine cleanly. 
+This first approach would use a portion of the visible light spectrum would be used to represent the invisible light. For example, if an image was taken with UV light, we could reserve the purple portion of the visible light spectrum for the UV image. The colors on the UV image would be remapped using the section of the visible light spectrum that has been reserved (which was determined using different functions). The same will be done to the image taken with visible light, the colors will be remapped with our new "compressed" light spectrum before the two images are layered over each other. Once the images are layered, the details of both images may be seen simultaneously. As for the downsides, the coloring of the new combined image will be off, overall quality may decrease (pixelation of image), and the images need to be lined up properly in order for them to combine cleanly. 
+
+##### Visualization of Hue Mapping
+
+Visible light hue mapping (linear, squared, square root, and segmented):
+
+<img width="740" height="175" src="https://github.com/user-attachments/assets/6555670e-e094-4828-9a5c-50ed91fb3fb0" />
+
+UV light hue mapping:
+
+<img width="243" height="173" src="https://github.com/user-attachments/assets/bf4cd4fc-f6f3-4605-8564-a105a61c054f" />
+
 
 ### Masking
 
@@ -423,9 +434,11 @@ plt.show()
 
 # Images
 
-Majority of the images were lost over time (I deleted them to clear up storage) and so the following figures are the remaining ones that I managed to recover. As for the image results, all of them were lost. A description has been added to help with visualizing the combined images. Feel free to try and run the code with the images to see the results (although I am unsure if the code is the finalized/functional version).
+Majority of the images were lost over time (I deleted them to clear up storage) and so the following figures are the remaining ones that I managed to recover. The same goes for the combined images. Feel free to try and run the code with the images to see the results (although I am unsure if the code is the finalized/functional version).
 
 Originally, we removed the filter on a camera to create a full spectrum camera. Lenses were placed on top of the camera to only allow light of certain wavelengths to be captured.
+
+All of the flower photos were taken by [Bjørn Rørslett](http://www.naturfotograf.com/UV_flowers_list.html#OXALIDCX).
 
 ## Testing the Lenses
 
@@ -484,6 +497,65 @@ Recolored image (yellow):
 <img width="100%" src="https://github.com/user-attachments/assets/a426a5b1-8b76-4968-ae4a-7b3f684c8cdf" />
 
 
-## Merging Photos
+## Mapping Photos
+
+*vl_h stands for visible light hue*
+
+Some of the images may have been shifted to allow the combined image to align better, the altered images also have decreased quality since the ones with higher quality have been lost.
+
+### Geranium Svlvaticum 
+
+#### Linear Mapping
+
+Table of images:
+
+<img width="100%" src="https://github.com/user-attachments/assets/7a0647e0-d990-4485-ac48-f10d7b15022e" />
+
+HSV distribution in images:
+
+<img width="700" height="400" src="https://github.com/user-attachments/assets/57d8807d-140a-423f-9999-44aa53d57548" />
+
+#### Segmented Mapping
+
+Table of images: 
+
+<img width="100%" src="https://github.com/user-attachments/assets/b6186593-6186-4027-8e24-63a7e0a84fcc" />
+
+HSV distribution in images:
+
+<img width="700" height="400" alt="Notebook (2)" src="https://github.com/user-attachments/assets/df1a9d3a-e831-485a-b9fa-99881a31a9e1" />
+
+#### Squared Mapping 
+
+Table of images:
+
+<img width="100%" src="https://github.com/user-attachments/assets/ba7966ad-d055-43d4-bff1-97f831038743" />
+
+HSV distribution in images:
+
+<img width="700" height="400" src="https://github.com/user-attachments/assets/4d02f456-b012-4c59-98c2-2ffd3889f1b8" />
+
+#### Square Root Mapping
+
+Table of images:
+
+<img width="100%" src="https://github.com/user-attachments/assets/835ebdd8-a8b4-448f-86b3-fbfd86d0263c" />
+
+HSV distribution in images:
+
+<img width="700" height="400" src="https://github.com/user-attachments/assets/bac4d7df-8ced-4b9a-be63-e0717744bc0e" />
+
+
+### Oxalis Fontana 
+
+#### Linear Mapping
+
+Table of images:
+
+<img width="100%" src="https://github.com/user-attachments/assets/36afe4bf-247f-4afb-9888-b785f6166b0f" />
+
+HSV distribution in images:
+
+
 
 ## Masking Photos
