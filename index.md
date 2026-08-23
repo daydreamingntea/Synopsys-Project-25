@@ -509,7 +509,7 @@ Some of the images may have been shifted to allow the combined image to align be
 
 Table of images:
 
-<img width="100%" src="https://github.com/user-attachments/assets/7a0647e0-d990-4485-ac48-f10d7b15022e" />
+<img width="100%" src="https://github.com/user-attachments/assets/66921f10-6ded-41db-b6f3-2d36d25f622b" />
 
 HSV distribution in images:
 
@@ -519,7 +519,7 @@ HSV distribution in images:
 
 Table of images: 
 
-<img width="100%" src="https://github.com/user-attachments/assets/b6186593-6186-4027-8e24-63a7e0a84fcc" />
+<img width="100%" src="https://github.com/user-attachments/assets/ecce81ce-37c1-444b-b899-73e26ee595ef" />
 
 HSV distribution in images:
 
@@ -529,7 +529,7 @@ HSV distribution in images:
 
 Table of images:
 
-<img width="100%" src="https://github.com/user-attachments/assets/ba7966ad-d055-43d4-bff1-97f831038743" />
+<img width="100%" src="https://github.com/user-attachments/assets/2c9b4200-c359-4740-b01f-d4558a0aa0f2" />
 
 HSV distribution in images:
 
@@ -539,7 +539,7 @@ HSV distribution in images:
 
 Table of images:
 
-<img width="100%" src="https://github.com/user-attachments/assets/835ebdd8-a8b4-448f-86b3-fbfd86d0263c" />
+<img width="100%" src="https://github.com/user-attachments/assets/384de720-0555-4574-9a43-5e6faf9d2c4f" />
 
 HSV distribution in images:
 
@@ -552,10 +552,29 @@ HSV distribution in images:
 
 Table of images:
 
-<img width="100%" src="https://github.com/user-attachments/assets/36afe4bf-247f-4afb-9888-b785f6166b0f" />
+<img width="100%" src="https://github.com/user-attachments/assets/41a68abd-52c6-403a-9a7d-f0f52f2327c5" />
 
 HSV distribution in images:
 
+<img width="700" height="400" src="https://github.com/user-attachments/assets/3c622e7c-95b9-4256-b5f1-5c972144af4e" />
+
+#### Segmented Mapping
+
+Table of images:
+
+<img width="100%" src="https://github.com/user-attachments/assets/11aa21b4-c068-4ec8-acaa-cfff3da90c67" />
+
+HSV distribution in images:
+
+<img width="700" height="400" src="https://github.com/user-attachments/assets/baecf42e-1977-4d75-9f95-4b957b08f75b" />
+
+#### Quadratic Mapping
+
+Table of images:
+
+<img width="700" height="400" src="https://github.com/user-attachments/assets/715bacff-ff44-4eff-8cf6-e3953fb98d7a" />
+
+HSV distribution in images:
 
 
 ## Masking Photos
