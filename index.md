@@ -572,7 +572,7 @@ HSV distribution in images:
 
 Table of images:
 
-<img width="700" height="400" src="https://github.com/user-attachments/assets/715bacff-ff44-4eff-8cf6-e3953fb98d7a" />
+<img width="100%" src="https://github.com/user-attachments/assets/1b2e00cb-84a6-4a78-a4f1-d88b83fb9028" />
 
 HSV distribution in images:
 
