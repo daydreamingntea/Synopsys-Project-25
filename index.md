@@ -576,5 +576,16 @@ Table of images:
 
 HSV distribution in images:
 
+<img width="700" height="400" src="https://github.com/user-attachments/assets/ed59f73f-4d60-43f3-be91-d73d5dbf1d9e" />
+
+#### Square Root Mapping
+
+Table of images:
+
+<img width="100%" src="https://github.com/user-attachments/assets/5e793fc1-2be4-4edb-a321-8153659fb475" />
+
+HSV distribution in images:
+
+<img width="700" height="400" src="https://github.com/user-attachments/assets/d1aaa7d9-049c-4861-b9bc-89dcfd10f0f8" />
 
 ## Masking Photos
