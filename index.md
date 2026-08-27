@@ -588,4 +588,17 @@ HSV distribution in images:
 
 <img width="700" height="400" src="https://github.com/user-attachments/assets/d1aaa7d9-049c-4861-b9bc-89dcfd10f0f8" />
 
+### Kitchen Stove
+
+#### Linear Mapping
+
+Table of images:
+
+<img width="100%" src="https://github.com/user-attachments/assets/9e9b734d-078e-4200-8d6d-eae31acdcfad" />
+
+HSV distribution in images:
+
+<img width="700" height="400" src="https://github.com/user-attachments/assets/c06ad8f0-67e1-41a6-adde-4ff41d32d2a8" />
+
+
 ## Masking Photos
