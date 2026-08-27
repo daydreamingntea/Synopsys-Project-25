@@ -4,8 +4,7 @@
 
 Our display was made by creating a slideshow and printing each slide on a sheet on paper before it was taped onto a tri-fold poster board. The slides were edited into a video format but the content is identical.
 
-https://github.com/user-attachments/assets/b32637c9-1745-4259-b0b5-b6d684cb86f1
-
+<video src="https://github.com/user-attachments/assets/510e611c-4c4d-4188-b843-07eb98fdb569" controls="controls" style="max-width: 100%;"></video>
 
 # Personal Journey
 
