@@ -1,5 +1,11 @@
 *Note: Majority of information documenting the process and procedures of this project have been lost. The following information described below will focus on what has been recovered along with personal thoughts/experiences. This was my first time with an engineering project and evidently, is not of high quality nor was it presented at its best.*
 
+# Recap Video
+
+Our display was made by creating a slideshow and printing each slide on a sheet on paper before it was taped onto a tri-fold poster board. The slides were edited into a video format but the content is identical.
+
+https://github.com/user-attachments/assets/b32637c9-1745-4259-b0b5-b6d684cb86f1
+
 
 # Personal Journey
 
