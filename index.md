@@ -602,3 +602,9 @@ HSV distribution in images:
 
 
 ## Masking Photos
+
+### Kitchen Stove
+
+Table of images:
+
+<img width="100%" src="https://github.com/user-attachments/assets/ab397d72-0109-4c77-b436-a0125e423367" />
