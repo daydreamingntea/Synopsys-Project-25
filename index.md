@@ -1,3 +1,89 @@
+---
+layout: default
+---
+<style>
+  /* Layout: sidebar + content side by side */
+  .page-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .toc-sidebar {
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    width: 200px;
+    flex-shrink: 0;
+    background: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+  .toc-sidebar h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #159957;
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 0.5rem;
+  }
+  .toc-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .toc-sidebar li {
+    margin-bottom: 0.4rem;
+  }
+  .toc-sidebar a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .toc-sidebar a:hover {
+    background: #eaf7ef;
+    color: #159957;
+  }
+  .toc-sidebar a.active {
+    background: #159957;
+    color: #fff;
+  }
+  .main-body {
+    flex: 1;
+    min-width: 0;
+  }
+  /* Stack on small screens */
+  @media (max-width: 800px) {
+    .page-content {
+      flex-direction: column;
+    }
+    .toc-sidebar {
+      position: static;
+      width: 100%;
+      max-height: none;
+    }
+  }
+</style>
+<div class="page-content">
+<nav class="toc-sidebar" id="toc">
+  <h4>Contents</h4>
+  <ul>
+    <li><a href="#recap-video">Recap Video</a></li>
+    <li><a href="#personal-journey">Personal-Journey</a></li>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#project-description">Project Description</a></li>
+    <li><a href="#code">Code</a></li>
+    <li><a href="#images">Images</a></li>
+  </ul>
+</nav>
+<div class="main-body" markdown="1">
+
 *Note: Majority of information documenting the process and procedures of this project have been lost. The following information described below will focus on what has been recovered along with personal thoughts/experiences. This was my first time with an engineering project and evidently, is not of high quality nor was it presented at its best.*
 
 # Recap Video
