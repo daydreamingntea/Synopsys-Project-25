@@ -699,3 +699,31 @@ HSV distribution in images:
 Table of images:
 
 <img width="100%" src="https://github.com/user-attachments/assets/ab397d72-0109-4c77-b436-a0125e423367" />
+
+</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".toc-sidebar a");
+  const sections = Array.from(links).map(link =>
+    document.querySelector(link.getAttribute("href"))
+  ).filter(Boolean);
+
+  function onScroll() {
+    let currentId = "";
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 100) {
+        currentId = "#" + section.id;
+      }
+    });
+    links.forEach(link => {
+      link.classList.toggle("active", link.getAttribute("href") === currentId);
+    });
+  }
+
+  window.addEventListener("scroll", onScroll);
+  onScroll();
+});
+</script>
